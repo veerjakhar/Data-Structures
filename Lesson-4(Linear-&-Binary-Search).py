@@ -1,0 +1,27 @@
+#data = [1,8,6,2,7,3,9,5,4]
+data = list(map(int, input("Enter the numbers: ").split()))
+
+key = int(input("Enter the number wanted to be found: "))
+
+#Linear Search
+for i in range(0, len(data)):
+    print(data[i]) 
+    if key == data[i]:
+        print("^ Number found")
+
+for num in data:
+    if num == key:
+        print("The number has been found")
+
+#Binary Search
+def binary(data, key, low, high):
+    mid = (low + high)//2
+    if low <= high:
+        if data[mid] == key:
+            return mid
+        elif data[mid] < key:
+            return binary(data, key, mid + 1, high)
+        elif data[mid] > key:
+            return binary(data, key, low, mid - 1)
+    else:
+        return -1
