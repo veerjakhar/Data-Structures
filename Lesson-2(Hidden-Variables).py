@@ -21,8 +21,6 @@ class user:
             if emi == self.email:
                 newemi = input("Please Enter The New Password")
                 self.__password = newemi
-                if self.__password == old_pass:
-                    print("This was you previous password")
 
 numone = user("Croissant", "1eggysant@gmail.com", "Reev_Rahkaj2")
 print(numone.name)

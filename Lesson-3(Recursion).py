@@ -35,4 +35,4 @@ def pow(x, y):
         else:
             return(x * pow(x, y//2) * pow(x, y//2))
 
-print(pow(1009090099009, 2))
+print(pow(100, 2))
